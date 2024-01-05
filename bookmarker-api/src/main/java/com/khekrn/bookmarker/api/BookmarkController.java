@@ -1,6 +1,6 @@
 package com.khekrn.bookmarker.api;
 
-import com.khekrn.bookmarker.domain.BookmarkDTO;
+import com.khekrn.bookmarker.domain.dto.BookmarkDTO;
 import com.khekrn.bookmarker.domain.BookmarkService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

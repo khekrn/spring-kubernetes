@@ -1,5 +1,6 @@
 package com.khekrn.bookmarker.domain;
 
+import com.khekrn.bookmarker.domain.dto.BookmarkDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

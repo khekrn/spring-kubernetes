@@ -1,4 +1,4 @@
-package com.khekrn.bookmarker.domain;
+package com.khekrn.bookmarker.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

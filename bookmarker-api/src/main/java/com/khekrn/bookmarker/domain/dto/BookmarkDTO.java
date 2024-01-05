@@ -1,12 +1,15 @@
-package com.khekrn.bookmarker.domain;
+package com.khekrn.bookmarker.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.khekrn.bookmarker.domain.entity.Bookmark;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
 
+@Data
 @Getter
 @Setter
 public class BookmarkDTO {
@@ -21,6 +24,7 @@ public class BookmarkDTO {
     private boolean isFirst;
     @JsonProperty("isLast")
     private boolean isLast;
+
 
     public BookmarkDTO(Page<Bookmark> pageable) {
         this.data = pageable.getContent();
