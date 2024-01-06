@@ -1,39 +1,16 @@
 package com.khekrn.bookmarker.domain.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.khekrn.bookmarker.domain.entity.Bookmark;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.data.domain.Page;
+import lombok.*;
 
-import java.util.List;
+import java.time.Instant;
 
-@Data
 @Getter
 @Setter
+@AllArgsConstructor
 public class BookmarkDTO {
 
-    private List<Bookmark> data;
-    private long totalElements;
-    private int totalPages;
-    private int currentPage;
-    private boolean hasNext;
-    private boolean hasPrevious;
-    @JsonProperty("isFirst")
-    private boolean isFirst;
-    @JsonProperty("isLast")
-    private boolean isLast;
-
-
-    public BookmarkDTO(Page<Bookmark> pageable) {
-        this.data = pageable.getContent();
-        this.totalElements = pageable.getTotalElements();
-        this.totalPages = pageable.getTotalPages();
-        this.currentPage = pageable.getNumber() + 1;
-        this.hasNext = pageable.hasNext();
-        this.hasPrevious = pageable.hasPrevious();
-        this.isFirst = pageable.isFirst();
-        this.isLast = pageable.isLast();
-    }
+    private Long id;
+    private String title;
+    private String url;
+    Instant createdAt;
 }

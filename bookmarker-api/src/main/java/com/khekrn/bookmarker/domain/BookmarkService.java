@@ -1,6 +1,6 @@
 package com.khekrn.bookmarker.domain;
 
-import com.khekrn.bookmarker.domain.dto.BookmarkDTO;
+import com.khekrn.bookmarker.domain.dto.BookmarksDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -16,9 +16,9 @@ public class BookmarkService {
     private final BookmarkRepository bookmarkRepository;
 
     @Transactional(readOnly = true)
-    public BookmarkDTO getBookmarks(Integer page){
+    public BookmarksDTO getBookmarks(Integer page){
         int pageNo = page < 1 ? 0 : page -1;
         Pageable pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "createdAt");
-        return new BookmarkDTO(bookmarkRepository.findAll(pageable));
+        return new BookmarksDTO(bookmarkRepository.findBookmarks(pageable));
     }
 }
