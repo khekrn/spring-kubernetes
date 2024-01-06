@@ -1,6 +1,6 @@
 package com.khekrn.bookmarker;
 
-import com.khekrn.bookmarker.domain.Bookmark;
+import com.khekrn.bookmarker.domain.entity.Bookmark;
 import com.khekrn.bookmarker.domain.BookmarkRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
